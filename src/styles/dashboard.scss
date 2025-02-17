@@ -122,6 +122,9 @@ nav {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  &.active{
+    display: none;
+  }
 }
 .burger div {
   width: 25px;
@@ -130,6 +133,79 @@ nav {
   margin: 2px;
   transition: all 0.3s ease;
 }
+
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.fullscreen-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fullscreen-menu a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.fullscreen-menu a:hover {
+  color: #ff7b00;
+}
+
+.mobile-links{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.close-menu {
+  position: absolute;
+  top: 2vh;
+  right: 6vw;
+  font-size: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 2px;
+  transition: all 0.3s ease;
+  }
+}
+
+.close-menu:hover {
+  transform: scale(1.1);
+}
+
+
+
+
 /* na telefon */
 @media screen and (max-width: 769px) {
   body {

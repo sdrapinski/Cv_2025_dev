@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
@@ -6,9 +6,10 @@ import { useWindowWidth } from "@react-hook/window-size";
 
 const Dashboard = () => {
   const windowWidth = useWindowWidth();
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <section id="home" className="home">
-      <Navbar style={{ marginTop: "10px" }}>
+       <Row style={{ marginTop: "10px" }}>
         <Col
           xxl={{ offset: 1, span: 3 }}
           md={{ span: 4 }}
@@ -37,13 +38,28 @@ const Dashboard = () => {
             </Row>
           </Col>
         ) : (
-          <Col xs={1} className="burger">
+          <Col xs={1} className={`burger ${menuOpen ? 'active' : ''}`}   onClick={() => setMenuOpen(!menuOpen)}>
             <div></div>
             <div></div>
             <div></div>
           </Col>
         )}
-      </Navbar>
+      </Row>
+      <div className={`fullscreen-menu ${menuOpen ? 'active' : ''}`}>
+
+        <div className="close-menu" onClick={() => setMenuOpen(false)}>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+
+        <nav className="mobile-links">
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="/Szymon_Drapiński_CV.pdf" onClick={() => setMenuOpen(false)}>CV</a>
+        </nav>
+      </div>
       <span className="title"> Full-Stack Developer</span>
 
       <div className="arrow">
