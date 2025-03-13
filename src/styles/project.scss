@@ -14,13 +14,30 @@
     background-repeat: no-repeat;
     */
   }
-  .projektyRow {
-    justify-content: space-around;
-    margin-top: 50px;
+  .projectRow {
+    display: flex;
+    justify-content: space-between;
   }
-  .prozdj {
-    height: 300px;
-    max-width: 470px;
+  
+  .projectCard {
+    border-radius: 5px;
+    box-shadow: 5px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    img{
+      border-radius: 5px;
+      height: 350px;
+      max-width: 600px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+   
+  }
+  .projectCard:hover img {
+    transform: scale(1.05); /* Powiększenie */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Efekt cienia */
   }
   
   @media screen and (max-width: 768px) {
@@ -50,4 +67,37 @@
       object-fit: cover;
     }
   }
+
+  @media (max-width: 1200px) {
+    .projectCard img {
+        height: 300px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .projectRow {
+        flex-direction: column; /* Karty pod sobą zamiast obok siebie */
+        align-items: center;
+    }
+
+    .projectCard img {
+        height: 280px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectCard img {
+        height: 250px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .projectCard img {
+        height: 220px;
+        max-width: 100%;
+    }
+}
   
