@@ -32,8 +32,12 @@ const Dashboard = () => {
               <Col>
                 <a href="#contact">Contact</a>
               </Col>
+              <Col></Col>
               <Col>
-                <a href="/Szymon_Drapiński_CV.pdf">CV</a>
+                <a href="./Szymon_Drapiński_CV.pdf">CV</a>
+              </Col>
+              <Col>
+                <a href="https://github.com/sdrapinski">GitHub</a>
               </Col>
             </Row>
           </Col>
@@ -58,6 +62,7 @@ const Dashboard = () => {
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           <a href="/Szymon_Drapiński_CV.pdf" onClick={() => setMenuOpen(false)}>CV</a>
+          <a href="https://github.com/sdrapinski" onClick={() => setMenuOpen(false)}>GitHub</a>
         </nav>
       </div>
       <span className="title"> Full-Stack Developer</span>
@@ -173,6 +178,7 @@ const Dashboard = () => {
               d="M155.251 0L160.772 23.8527L135.078 28.9779L129.558 5.12523L155.251 0ZM159.415 23.0385L154.374 1.25992L130.915 5.93946L135.955 27.718L159.415 23.0385Z"
               fill="black"
             />
+           
             <path
               id="Vector_19"
               d="M163.8 101.795L144.62 118.473L126.654 100.667L145.834 83.9886L163.8 101.795ZM144.673 116.974L162.185 101.745L145.782 85.4879L128.269 100.716L144.673 116.974Z"
@@ -181,6 +187,7 @@ const Dashboard = () => {
           </g>
         </svg>
       </span>
+      
     </section>
   );
 };

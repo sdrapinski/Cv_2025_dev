@@ -63,8 +63,15 @@ body {
 }
 .thinker {
   position: absolute;
+  position: relative;
   top: 7%;
   left: 50%;
+}
+@supports (-webkit-touch-callout: none) {
+  .thinker svg {
+    left: 0px !important; /* Możesz dostosować wartość */
+    transform: translateX(-50%); /* Jeśli trzeba przesunąć względem rodzica */
+  }
 }
 
 nav ul li a {
@@ -304,9 +311,7 @@ nav {
     transform: rotate(-30deg);
   }
 }
-.thinker {
-  position: relative;
-}
+
 
 .thinker svg {
   position: absolute;
@@ -318,13 +323,16 @@ nav {
   .logo {
     letter-spacing: 2px;
   }
+  .thinker {
+    top: 90px;
+  }
   .title {
     font-size: 40px;
   }
   .thinker svg {
     position: absolute;
     width: 220px;
-    top: 60px;
+   
     left: -40px;
   }
 }
@@ -333,11 +341,13 @@ nav {
   .title {
     font-size: 30px;
   }
+  .thinker {
+    top: 100px;
+    
+  }
   .thinker svg {
     position: absolute;
-    width: 220px;
-    top: 20px;
-    left: -60px;
+    left: -70px;
   }
 }
 
@@ -360,6 +370,7 @@ nav {
   }
   .thinker {
     position: relative;
+    top:60px;
   }
   .thinker svg {
     position: absolute;

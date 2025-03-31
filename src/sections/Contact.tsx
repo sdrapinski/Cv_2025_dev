@@ -6,7 +6,7 @@ const Contact = () => {
     <Container className='contact' id="contact">
       <Row>
         <Col style={{textAlign:"center"}}>
-        <h2> Feel free to contact me: </h2> 
+        <h3> Feel free to contact me: </h3> 
         <p>
         <b>  Email:   <a className='contact__link' href="mailto:szymondrapinski@gmail.com">szymondrapinski@gmail.com</a> </b>
         </p>
